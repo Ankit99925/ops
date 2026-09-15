@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-LIBEXEC="$(cd "$(dirname "$0")" && pwd)/libexec"
+LIBEXEC="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)/libexec"
 
 usage() {
     cat >&2 <<EOF
